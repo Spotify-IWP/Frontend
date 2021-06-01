@@ -1,0 +1,14 @@
+.main{
+   height: 800px;
+    background-color:black;
+    font-family: 'proximanova-semibold-webfont';
+}
+.inner{
+    background-color: #8839FF;
+    height: 100px;
+   
+}
+.mr-auto{
+    font-size: 25px;
+    
+}

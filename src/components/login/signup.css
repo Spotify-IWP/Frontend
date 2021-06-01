@@ -1,0 +1,60 @@
+.main{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    font-family: 'proximanova-semibold-webfont';
+    font-size: 20px;
+}
+.a{
+    float:right;
+    margin-top: 2vh;
+    margin-right: 15%;
+    border-radius: 2vh;
+    width: 30%;
+    background-color:#8839FF;
+}
+.a1{
+    float:right;
+    margin-top: 20vh;
+    margin-right: 15%;
+    border-radius: 2vh;
+    width: 30%;
+    background-color:#8839FF;
+}
+.b{
+    /* margin-top: 20vh; */
+    float:left;
+    margin-left: 5%;
+    text-align: left;
+    width:50%;
+}
+input{
+    border-radius: 1vh;
+    font-size: 20px;
+    width: 150%;
+    /* margin-right: 10px; */
+    margin-bottom: 10px;
+}
+img{
+    margin-top: 11vh;
+    width: 70%;
+    margin-left: 10%;
+    /* height:10px; */
+}
+.nm{
+    text-align: left;
+    height:7%;
+    background-color:#8839FF;
+  font-size: 1.5em;
+  /* margin-bottom: 1.83em; */
+  font-weight: bold;
+
+}
+.cen{
+    text-align: center;
+    width: 150%;
+}
+.l{
+    /* float:left; */
+    width:50%;
+}
