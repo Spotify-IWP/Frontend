@@ -30,4 +30,10 @@
 .signup:hover{
     color:#ACD3DE
 }
-
+.logout{
+    padding: 10px;
+    color: whitesmoke;
+}
+.logout:hover{
+    color:#ACD3DE
+}

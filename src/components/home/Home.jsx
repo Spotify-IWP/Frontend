@@ -20,10 +20,8 @@ class  SearchPage extends Component{
       
     }
     event.target.reset()
-    
-    
-    
-    axios.get(`https://spotify-iwp.herokuapp.com/lyrics/search?artist=${encodeURIComponent(search.artist)}&song=${encodeURIComponent(search.song)}`,{ 'headers': { 'authorization': localStorage.getItem('token') }})
+    if (localStorage.getItem('token')){
+      axios.get(`https://spotify-iwp.herokuapp.com/lyrics/search?artist=${encodeURIComponent(search.artist)}&song=${encodeURIComponent(search.song)}`,{ 'headers': { 'authorization': localStorage.getItem('token') }})
       .then(res=>{
         console.log(res);
         console.log(res.data);
@@ -36,10 +34,14 @@ class  SearchPage extends Component{
       .catch(err=> { 
         console.log(err.response.data)
         document.getElementById('display').innerHTML="Lyrics not available"
+        // this.setstate(search.artist="")
+      // this.setstate(search.song="")
 
       })
-      // this.setstate(search.artist="")
-      // this.setstate(search.song="")
+    }
+    else{
+      alert('Login required to see lyrics!');
+    }      
       
 
   }
