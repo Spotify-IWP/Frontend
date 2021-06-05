@@ -17,8 +17,9 @@ class  SearchPage extends Component{
     const search = {
       artist: this.state.artist,
       song:this.state.song
+      
     }
-    
+    event.target.reset()
     
     
     
@@ -39,6 +40,7 @@ class  SearchPage extends Component{
       })
       // this.setstate(search.artist="")
       // this.setstate(search.song="")
+      
 
   }
 handleChange1 = event =>{
