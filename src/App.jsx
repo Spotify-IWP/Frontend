@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/navbar/navbar.jsx';
-import SearchPage from './components/home/Home.jsx';
+import Navbar from './components/navbar/navbar.js';
+import SearchPage from './components/home/Home.js';
+import View from './components/viewhistory/history.js';
 import Login from './components/login/login.js';
 import Signup from './components/login/signup.js';
 import Logout from './components/login/logout.js';
@@ -21,6 +22,7 @@ class App extends Component{
 				
 				<Switch>
                      <Route exact path="/home" render={() => <SearchPage/>} />
+					 <Route exact path="/view" component={View}/>
                       <Route exact path="/" component={Login} />
 					<Route exact path="/signup" component={Signup} />
 					<Route exact path="/logout" component={Logout} />

@@ -16,8 +16,16 @@
 .Home:hover{
     color:#ACD3DE
 }
-.login{
+.view{
     padding: 10px;
+    color: whitesmoke;
+}
+.view:hover{
+    color: #ACD3DE;
+}
+.login{
+    padding-left: 750px;
+    padding-right: 10px ;
     color: whitesmoke;
 }
 .login:hover{

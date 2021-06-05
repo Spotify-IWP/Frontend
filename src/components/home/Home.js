@@ -2,7 +2,7 @@ import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import  Pic from './pic.jsx';
+import  Pic from './pic.js';
 import axios from "axios";
 import './style.css';
 
@@ -12,6 +12,7 @@ class  SearchPage extends Component{
     artist:'',
     song:' '
   };
+ 
   handleSubmit = event => {
     event.preventDefault();
     const search = {
@@ -34,17 +35,16 @@ class  SearchPage extends Component{
       .catch(err=> { 
         console.log(err.response.data)
         document.getElementById('display').innerHTML="Lyrics not available"
-        // this.setstate(search.artist="")
-      // this.setstate(search.song="")
-
       })
     }
     else{
-      alert('Login required to see lyrics!');
+      alert('Login required to see the lyrics!');
+      window.location='/'
     }      
       
 
   }
+ 
 handleChange1 = event =>{
     this.setState({ artist: event.target.value});
   }
@@ -52,9 +52,7 @@ handleChange1 = event =>{
     this.setState({ song: event.target.value});
     
   }
-
-
-  render(){
+render(){
   return (
     
       <center>
@@ -66,21 +64,9 @@ handleChange1 = event =>{
             <input type="text" id="f" name="artist" placeholder="Artist name"  required onChange={this.handleChange1}/><br/><br/>
             <input type="text" id="f" name="song" placeholder="Song name"  required onChange={this.handleChange2}/><br/><br/>
             <button class="btn btn-outline-success" id="btn" type="submit" value="search" >Search</button>
-        </form>
-      {/* <form className="form-inline mt-4 mb-4" onSubmit={this.handleSubmit}>
-        
-        <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search song" aria-label="Search" onChange={this.handleChange2}/>
-       
-        <br/><br/>
-        <center>
-        <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search artist" aria-label="Search" onChange={this.handleChange1}/>
-        
-        </center>
-  
-        <input style={{backgroundColor:"white"}} className="form-control form-control-sm ml-3 w-25" type="submit" value="Search" />
-      </form> */}
-      </div>
-    {/* </MDBCol> */}
+            </form>
+     </div>
+    
     <p style={{color:"white"}}id="song"></p>
     <p style={{color:"white"}} id="artist"></p>
     <p style={{color:"white"}} id="display"></p>

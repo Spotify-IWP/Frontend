@@ -1,0 +1,10 @@
+table,th,td{
+    border: 1px solid orange;
+}
+th,td{
+    padding: 20px;
+}
+table{
+    width:650px;
+        
+}

@@ -18,6 +18,10 @@ class Navbar extends Component {
                         <NavLink to='/home' className="Home">
                             Home
                         </NavLink>
+                        <NavLink to="/view" className="view">
+                        ViewHistory
+                        </NavLink> 
+
                     <NavLink to="/" className="login">
                         Login
                         </NavLink> 
@@ -28,6 +32,7 @@ class Navbar extends Component {
                     <NavLink to="/logout" className="logout"> 
                         Logout
                     </NavLink> 
+                    
                     
                    </div>
               
