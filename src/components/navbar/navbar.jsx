@@ -1,46 +1,36 @@
-import React from 'react';
+import React, { Component } from "react";
 import './navbar.css'
-import {Navbar,Nav}from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from '../login/login.js';
-import Signup from '../login/signup.js';
-import { BrowserRouter as  Switch, Route, Link } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { NavbarBrand } from "react-bootstrap";
 
-const Header=({children})=>{
-  return(
-  <Router>
-     <div className="main">
-      
-       <Navbar className="inner"  variant="dark">
-        <Navbar.Brand href="/"> 
-          Songly-Lyrics
-        </Navbar.Brand>
-       <Nav className="mr-auto" >
-       {/* <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#mymusic">My Music</Nav.Link>
-      <Nav.Link href="#charts">Charts</Nav.Link>
-      <Nav.Link href="#login">Signup</Nav.Link>   */}
-      
-      <ul className="navbar-nav mr-auto">
-            {/* <li><Link to={'/'} className="nav-link"> Home </Link></li> */}
-            <li><Link to={'/login'} className="nav-link">Login</Link></li>
-            <li><Link to={'/signup'} className="nav-link">Signup</Link></li>
-          </ul>
-     </Nav>
-     </Navbar>
-         <Switch>
-              {/* <Route exact path='/' component={Home} /> */}
+class Navbar extends Component {
+
+    render() {
+        return (
+          
+            <div>
+           <div className="inner">
+                
+                    <NavbarBrand>
+                        <b>Songly-Lyrics</b>
+                    </NavbarBrand>
+                    
+                        <NavLink to='/home' className="Home">
+                            Home
+                        </NavLink>
+                    <NavLink to="/" className="login">
+                        Login
+                        </NavLink> 
+                    
+                    <NavLink to="/signup" className="signup"> 
+                        Signup
+                    </NavLink> 
+                    
+                   </div>
               
-              <Route path='/login' component={Login} />
-              <Route path='/signup' component={Signup} />
-          </Switch>
-  <br></br><br></br>
-  {children}
+            </div>
+        );
+    }
+}
 
-  
-</div>
-</Router>
-  );}
-    
-export default Header;
+export default Navbar;

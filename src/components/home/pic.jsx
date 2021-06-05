@@ -1,8 +1,11 @@
 import React from "react";
+import { Component } from "react";
 import play  from './play.jpg';
 
 
-const Pic=()=>{
+class  Pic extends Component{
+    render()
+    {
     return(
         <div class="bg">
         <img src={play} alt="abc"/>
@@ -10,5 +13,5 @@ const Pic=()=>{
             
           
     )
-}
+}}
 export default Pic;

@@ -1,38 +1,36 @@
 import React from 'react';
 import './App.css';
-import Header from './components/navbar/navbar.jsx';
-import SearchPage from './components/Home.jsx';
-import  Pic from './components/pic.jsx';
+import Navbar from './components/navbar/navbar.jsx';
+import SearchPage from './components/home/Home.jsx';
+import Login from './components/login/login.js';
+import Signup from './components/login/signup.js';
+import { BrowserRouter as  Switch,Route } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
+import {Component} from 'react';
 
-const App=()=>{
-// const cardinfo1 = {
-// image: require("./components/slide/head.jpg"),
-// title:"Album"
-// }
-// const cardinfo2 = {
-// image: require("./components/slide/mike.jpg"),
-// title:"Genre"
-// }
-// const cardinfo3 = {
-// image: require("./components/slide/reel.jpg"),
-// title:"Music"
-// } 
-return (
-<div className='App'>
-<Header>
-<Pic/>
-<SearchPage/>
-{/* <div className="col">
-<Cards id="space" cardinfo={cardinfo1}/>
-<Cards id="space" cardinfo={cardinfo2}/>
-<Cards id="space" cardinfo={cardinfo3}/>
-</div> */}
-</Header>
-</div> 
-);
+class App extends Component{
+	render(){
+  return (
+	
+	<div style={{backgroundColor:"black",height:"3000px"}}>
+		
+		
+			<BrowserRouter>
+			<Navbar/>
+				
+				<Switch>
+                     <Route exact path="/home" render={() => <SearchPage/>} />
+                      <Route exact path="/" component={Login} />
+					<Route exact path="/signup" component={Signup} />
+			    </Switch>
+			</BrowserRouter>
+			</div>
+		);
+	}
 }
-export default App;
 
+
+export default App;
 
     
 

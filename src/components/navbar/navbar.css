@@ -1,14 +1,33 @@
-.main{
-   height: 800px;
-    background-color:black;
-    font-family: 'proximanova-semibold-webfont';
-}
+
 .inner{
     background-color: #8839FF;
-    height: 100px;
+    height: 70x;
+    padding: 10px;
+    color:whitesmoke;
+    font-size: 20px;
    
 }
-.mr-auto{
-    font-size: 25px;
-    
+
+.Home{
+    padding: 10px;
+    color: whitesmoke;
+
 }
+.Home:hover{
+    color:#ACD3DE
+}
+.login{
+    padding: 10px;
+    color: whitesmoke;
+}
+.login:hover{
+    color:#ACD3DE
+}
+.signup{
+    padding: 10px;
+    color: whitesmoke;
+}
+.signup:hover{
+    color:#ACD3DE
+}
+

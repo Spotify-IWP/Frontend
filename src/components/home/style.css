@@ -1,0 +1,22 @@
+#f{
+    width: 25%;
+    padding: 10px;
+    background:white;
+    border: 0;
+    float: center;
+    font-size: 20px;
+    color: black;
+  }
+
+  #btn{
+      background-color:whitesmoke;
+      padding: 0px;
+    width: 15%;
+    float: center;
+    border:slateblue;
+    box-sizing: border-box;
+    color:black;
+    cursor: pointer;
+    font-size: 15px;
+      
+  }
