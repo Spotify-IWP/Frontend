@@ -25,6 +25,7 @@ class login extends Component{
           })
           .catch(err=> { 
             console.log(err.response.data)
+            alert("Incorrect username/password");
           })
       }
     handleChange1 = event =>{

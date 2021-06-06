@@ -28,9 +28,10 @@ class  View extends Component{
      
 
       }
-      else
-      {alert("Login to view history!")}
+      else{
+      alert("Login to view history!")
       window.location="/"
+      }
 
     }
     render(){

@@ -19,10 +19,11 @@ class Signup extends Component {
           .then(res=>{
             localStorage.setItem('token', res.data.token)
             console.log(res)
-            window.location = "/";
+            window.location = "/home";
           })
           .catch(err=> { 
               console.log(err.response.data)
+              alert(err.response.data.message);
             })
       }
     handleChange1 = event =>{
