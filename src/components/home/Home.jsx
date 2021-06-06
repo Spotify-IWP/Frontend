@@ -26,7 +26,7 @@ class  SearchPage extends Component{
       .then(res=>{
         console.log(res);
         console.log(res.data);
-        document.getElementById('display').innerHTML=res.data.lyrics.replace(new RegExp('\n','g'), '<br />');
+        document.getElementById('display').innerHTML=res.data.lyrics.replace(/\n/g, '<br />');
         document.getElementById('song').innerHTML="Song: "+search.song
         document.getElementById('artist').innerHTML="Artist: "+search.artist
         document.getElementById('song').style.fontSize="25px"
