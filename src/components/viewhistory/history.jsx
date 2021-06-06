@@ -14,9 +14,8 @@ class  View extends Component{
           axios.get(`https://spotify-iwp.herokuapp.com/lyrics/history`,{ 'headers': { 'authorization': localStorage.getItem('token')} })
           .then(res=>{
             console.log(res.data.searchHistory.length)
-            for(var i=0;i<res.data.searchHistory.length;i++)
-            {var obj=JSON.stringify(res.data.searchHistory[i])
-              obj=JSON.parse(obj)
+            for(let i=0;i<res.data.searchHistory.length;i++) {
+            const obj=res.data.searchHistory[i]
             document.getElementById("col1").innerHTML+=obj.song+"<br></br>"
             document.getElementById("col2").innerHTML+=obj.artist+"<br></br>"
             }
