@@ -38,13 +38,16 @@ class Signup extends Component {
         
          const usernameRegex = new RegExp('^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$');
          const passwordRegex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?([^\\w\\s]|[_])).{8,20}$');
-         if(!usernameRegex.test(document.form1.username))
+        //  console.log(document.form1.username.value);
+        //  console.log(document.form1.password.value);
+        //  console.log(document.form1.cpassword.value);
+         if(!usernameRegex.test(document.form1.username.value))
          {
              alert("Username incorrect")
          }
          else
-         c=c+1
-         if(!passwordRegex.test(document.form1.password))
+          c=c+1
+         if(!passwordRegex.test(document.form1.password.value))
          {
              alert("Password incorrect")
          }
